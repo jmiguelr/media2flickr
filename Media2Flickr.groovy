@@ -48,7 +48,11 @@ pub.files { File root, File file ->
             tags << current.getName()
             current = current.getParentFile()
         }
-        pub.publish(file, tags, hash)
+	try{
+        	pub.publish(file, tags, hash)
+	}catch(all){
+		pub.log "Unable to publish file: ${file.getAbsolutePath()} because: ${all.getMessage()} " + all
+	}
     } else {
         pub.log "Not uploading file: " + file.getAbsolutePath() + " as flickr already has it with hash: " + hash
     }
