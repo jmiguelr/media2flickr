@@ -125,7 +125,15 @@ class Publisher {
         tags << TAG_PREFIX + hash
         meta.setTags(tags)
         meta.setTitle(media.getName())
-        flickr.getUploader().upload(new FileInputStream(media), meta)
+	
+	def input = new FileInputStream(media)
+        try{
+		flickr.getUploader().upload(input, meta)
+	}finally{
+		try{
+			input.close()
+		}catch(all){}
+	}
         //log media.getAbsolutePath() +" uploaded to Flickr"
     }
     /**
