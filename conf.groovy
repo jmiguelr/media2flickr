@@ -14,8 +14,8 @@ media2flickr{
     videoTypes = ["avi","wmv","mov","mpeg","mpg","3gp","m2ts","ogg","ogv"]
 
     auth{
-        key = "xx"
-        secret = "xx"
+        key = "65bb099a6a779eee9a6e06a1bd942952"
+        secret = "13f28866d1b43644"
         token = System.properties['user.home'] + "/.media2flickr.token"
     }
     collections = [
