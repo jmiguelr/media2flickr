@@ -19,7 +19,9 @@ Contact 'me at kipz.org' if you want bug fixes and/or features.
 * Edit the config file (conf.groovy) to your needs. It should be self explanatory for geeky types.
 ** You probably only need to set the key/secret and the directory to upload in "collections"
 * Run the script
+
     bash> groovy Media2Flickr.groovy
+
 * Follow the instructions on your console to authenticate Media2Flickr with Flickr
 * Sit back and enjoy
 
